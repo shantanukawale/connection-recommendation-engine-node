@@ -39,4 +39,60 @@ db.cities.insertMany([{
 db.createCollection('users');
 db.users.createIndex({ "email": 1 }, { unique: true })
 db.users.createIndex({ "uuid": 1 }, { unique: true })
-db.cities.ensureIndex({"geometry.coordinates": '2d'})
+db.cities.ensureIndex({"geometry.coordinates": '2dsphere'})
+
+db.users.insertMany([{
+	"name" : "Shantanu",
+	"email" : "shantanu@abc.com",
+	"password" : "123456",
+	"uid" : "bd93c95e-00e5-4e3f-b8c4-7a9c7632009b",
+	"cityUid" : "491f1e36-536f-402b-87e4-6118f777a5d5",
+	"connections" : [
+		"302aa652-746c-4189-8256-d6a09e23da7d",
+		"b803fcbc-63cb-478a-bcb5-8fd5765be0b7",
+		"6c85c152-febd-430a-8474-f441c92496a7"
+	]
+}
+{
+	"name" : "Shantanu",
+	"email" : "shant@abc.com",
+	"password" : "123456",
+	"uid" : "302aa652-746c-4189-8256-d6a09e23da7d",
+	"cityUid" : "491f1e36-536f-402b-87e4-6118f777a5d5"
+}
+{
+	"name" : "Shantanu",
+	"email" : "shan@abc.com",
+	"password" : "123456",
+	"uid" : "167962a6-5a4b-4348-ad7c-579cfb1af2e5",
+	"cityUid" : "491f1e36-536f-402b-87e4-6118f777a5d5",
+	"connections" : [
+		"427ac79c-7a63-49b9-adf9-298403308cf8"
+	]
+}
+{
+	"name" : "Shantanu",
+	"email" : "sha@abc.com",
+	"password" : "123456",
+	"uid" : "b803fcbc-63cb-478a-bcb5-8fd5765be0b7",
+	"cityUid" : "a54d5ccd-167e-4bf7-91e6-013ac2a28f70",
+	"connections" : [
+		"167962a6-5a4b-4348-ad7c-579cfb1af2e5",
+		"bd93c95e-00e5-4e3f-b8c4-7a9c7632009b",
+		"302aa652-746c-4189-8256-d6a09e23da7d"
+	]
+}
+{
+	"name" : "Shantanu",
+	"email" : "sh@abc.com",
+	"password" : "123456",
+	"uid" : "6c85c152-febd-430a-8474-f441c92496a7",
+	"cityUid" : "8b31b075-7df0-4479-a35f-38bfa55693f2"
+}
+{
+	"name" : "Shantanu",
+	"email" : "s@abc.com",
+	"password" : "123456",
+	"uid" : "427ac79c-7a63-49b9-adf9-298403308cf8",
+	"cityUid" : "8b31b075-7df0-4479-a35f-38bfa55693f2"
+}])
