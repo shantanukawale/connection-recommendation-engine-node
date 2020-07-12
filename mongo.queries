@@ -1,0 +1,42 @@
+use sensehawk;
+
+db.createCollection('cities');
+db.cities.createIndex( { "uid": 1 }, { unique: true } );
+
+db.cities.insertMany([{
+  "name": "Pune",
+  "uid": "491f1e36-536f-402b-87e4-6118f777a5d5",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [18.5, 73.9]
+  }
+},
+{
+  "name": "Hyderabad",
+  "uid": "a54d5ccd-167e-4bf7-91e6-013ac2a28f70",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [17.4, 78.5]
+  }
+},
+{
+  "name": "Mumbai",
+  "uid": "8b31b075-7df0-4479-a35f-38bfa55693f2",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [19.1, 72.9]
+  }
+},
+{
+  "name": "Delhi",
+  "uid": "e6b9e631-9f9f-4af9-a775-d2a55f26bc10",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [28.7, 77.1]
+  }
+}]);
+
+db.createCollection('users');
+db.users.createIndex({ "email": 1 }, { unique: true })
+db.users.createIndex({ "uuid": 1 }, { unique: true })
+db.cities.ensureIndex({"geometry.coordinates": '2d'})
