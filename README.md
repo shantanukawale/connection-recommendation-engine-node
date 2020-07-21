@@ -40,4 +40,4 @@ REST API Connection recommendation engine.
 
 ### How does the GET /get_connection API work internally?
 
->It uses MongoDB's graphLookup and geoNear aggregate functions to return a list of recommended connections based on the depth and cities filters sorted on the distance in ascending order for an user.
+>It uses MongoDB's graphLookup and geoNear aggregation functions to return a list of recommended connections based on the depth and cities filters sorted on the distance in ascending order for an user.
