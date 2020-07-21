@@ -22,7 +22,7 @@ module.exports = function (app) {
     await updateUser(app.locals.db, req, res)
   })
 
-  app.post('/get_connections', async (req, res) => {
+  app.get('/get_connections', async (req, res) => {
     await getConnections(app.locals.db, req, res)
   })
 }

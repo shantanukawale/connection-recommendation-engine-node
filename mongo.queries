@@ -1,4 +1,4 @@
-use sensehawk;
+use connection-recommendation-engine;
 
 db.createCollection('cities');
 db.cities.createIndex( { "uid": 1 }, { unique: true } );
@@ -52,14 +52,14 @@ db.users.insertMany([{
 		"b803fcbc-63cb-478a-bcb5-8fd5765be0b7",
 		"6c85c152-febd-430a-8474-f441c92496a7"
 	]
-}
+},
 {
 	"name" : "Shantanu",
 	"email" : "shant@abc.com",
 	"password" : "123456",
 	"uid" : "302aa652-746c-4189-8256-d6a09e23da7d",
 	"cityUid" : "491f1e36-536f-402b-87e4-6118f777a5d5"
-}
+},
 {
 	"name" : "Shantanu",
 	"email" : "shan@abc.com",
@@ -69,7 +69,7 @@ db.users.insertMany([{
 	"connections" : [
 		"427ac79c-7a63-49b9-adf9-298403308cf8"
 	]
-}
+},
 {
 	"name" : "Shantanu",
 	"email" : "sha@abc.com",
@@ -81,14 +81,14 @@ db.users.insertMany([{
 		"bd93c95e-00e5-4e3f-b8c4-7a9c7632009b",
 		"302aa652-746c-4189-8256-d6a09e23da7d"
 	]
-}
+},
 {
 	"name" : "Shantanu",
 	"email" : "sh@abc.com",
 	"password" : "123456",
 	"uid" : "6c85c152-febd-430a-8474-f441c92496a7",
 	"cityUid" : "8b31b075-7df0-4479-a35f-38bfa55693f2"
-}
+},
 {
 	"name" : "Shantanu",
 	"email" : "s@abc.com",
